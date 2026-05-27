@@ -120,10 +120,9 @@ with col1:
 
 # Widget 2 - Menu com multiselect
 with col2:
-    """
-    Apesar de não precisar de todas as colunas, acho interessante deixar a opção assim
-    para possível aproveitamento em outros parâmetros
-    """
+    
+    # Apesar de não precisar de todas as colunas, acho interessante deixar a opção assim.
+    # Possível aproveitamento em outros parâmetros
 
     selected_cols = st.multiselect(
     'HISTOGRAMAS DISPONÍVEIS - SELECIONAR ABAIXO',
