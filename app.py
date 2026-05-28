@@ -121,7 +121,7 @@ with col1:
 # Widget 2 - Menu com multiselect
 with col2:
     
-    # Apesar de não precisar de todas as colunas, acho interessante deixar a opção assim.
+    # Apesar de não precisar de todas as colunas, achei interessante deixar a opção assim.
     # Possível aproveitamento em outros parâmetros
 
     selected_cols = st.multiselect(
@@ -130,6 +130,8 @@ with col2:
     )
 
     for col in selected_cols:
+        st.write(f'Você selecionou: {col}')
+
         # Selecionado somente categorias numéricas
         if col in ['price', 'odometer', 'model_year']:
             fig = px.histogram(
@@ -140,7 +142,7 @@ with col2:
             )
             st.plotly_chart(fig, width='stretch')
 
-        # Gerando warning para categorias que não geram histograma
+        # Gerando warning para categorias não numéricas
         else:
             st.warning(f'Categoria "{col}" não disponível para Histogramas')
 
